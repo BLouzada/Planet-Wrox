@@ -9,6 +9,13 @@ public partial class  Reviews_AllByGenre : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        using (PlanetWroxEntities myEntities = new PlanetWroxEntities())
+        {
+            var AllGenres = from genre in myEntities.Genres.Include("Reviews")
+                            orderby genre.Name
+                            select new { genre.Name, genre.Reviews };
+            Repeater1.DataSource = AllGenres.ToList();
+            Repeater1.DataBind();
+        }
     }
 }

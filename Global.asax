@@ -6,6 +6,12 @@
     {
         // Code that runs on application startup
         RouteConfig.RegisterRoutes(System.Web.Routing.RouteTable.Routes);
+        ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
+        new ScriptResourceDefinition
+        {
+            Path = "~/Scripts/jquery-2.2.2.min.js"
+        }
+        );
 
     }
     
