@@ -122,7 +122,7 @@ nav
     /*
     Gives the four menu items in the main menu a width of 200px each.
   */
-    width: 200px;
+    width: 160px;
   }
 
 section#MainContent
@@ -250,3 +250,20 @@ a.level2
     display: block;
     text-align: center;
     }
+  .ItemContainer
+{
+width: 600px;
+list-style-type: none;
+clear: both;
+}
+.ItemContainer li
+{
+height: 300px;
+width: 200px;
+float: left;
+}
+.ItemContainer li img
+{
+width: 180px;
+margin: 10px 20px 10px 0;
+}
