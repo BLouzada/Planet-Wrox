@@ -13,9 +13,22 @@ public partial class  Reviews_AllByGenre : BasePage
         {
             var AllGenres = from genre in myEntities.Genres.Include("Reviews")
                             orderby genre.Name
-                            select new { genre.Name, genre.Reviews };
-            Repeater1.DataSource = AllGenres.ToList();
-            Repeater1.DataBind();
+                            where (genre.Reviews.Count() > 0)
+
+                            select new
+                            {
+                                genre.Name,
+                                genre.Reviews
+                            };
+
+            
+            
+            
+            {
+               
+                Repeater1.DataSource = AllGenres.ToList();
+                Repeater1.DataBind();
+            }
         }
     }
 }

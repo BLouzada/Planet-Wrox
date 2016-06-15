@@ -69,6 +69,7 @@ public partial class  _ManagePhotoAlbum : BasePage
                            where p.Id == id
                            select p).Single();
             myEntities.Pictures.Remove(picture);
+            System.IO.File.Delete(Server.MapPath(picture.ImageUrl));
             myEntities.SaveChanges();
         }
 

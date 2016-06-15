@@ -6,7 +6,7 @@
     <asp:Repeater ID="Repeater1" runat="server">
         <ItemTemplate>
             <h3><asp:Literal Id="Literal1" runat="server" Text='<%# Eval ("Name") %>'></asp:Literal></h3>
-            <asp:BulletedList ID="ReviewList" runat="server" DataSource='<%# Eval( "Reviews") %>' DataTextField="Title" DisplayMode="Text"></asp:BulletedList>
+            <asp:BulletedList ID="ReviewList" runat="server" DataSource='<%# Eval( "Reviews") %>' DataTextField="Title" DisplayMode="Text" BulletStyle="Numbered"></asp:BulletedList>
         </ItemTemplate>
     </asp:Repeater>
 </asp:Content>

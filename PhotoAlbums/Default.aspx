@@ -14,7 +14,9 @@
         </EmptyDataTemplate>
         <ItemTemplate>
             <li>
+                <asp:HyperLink Id="hyperlink1" runat="server" NavigateUrl='<%# "PictureDetails?Id=" + Item.Id.ToString()  %>' >
                 <asp:Image Id="Image1" runat="server" ImageUrl='<%# Item.ImageUrl %>' ToolTip='<%# Item.ToolTip %>' />
+                </asp:HyperLink>
                 <asp:Label ID="Description" runat="server" Text='<%# Item.Description %>'/>
             </li>
         </ItemTemplate>
